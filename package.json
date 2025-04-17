@@ -3,7 +3,7 @@
   "version": "1.0.3",
   "description": "",
   "license": "ISC",
-  "author": "",
+  "author": "lamlib",
   "type": "module",
   "main": "index.js",
   "scripts": {
