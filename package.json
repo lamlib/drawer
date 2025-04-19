@@ -7,9 +7,10 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "vitest",
     "prepare": "husky install",
-    "release": "standard-version"
+    "release": "standard-version",
+    "commit": "cz"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.0",
@@ -17,7 +18,8 @@
     "commitizen": "^4.3.1",
     "cz-conventional-changelog": "^3.3.0",
     "husky": "^8.0.0",
-    "standard-version": "^9.5.0"
+    "standard-version": "^9.5.0",
+    "vitest": "^3.1.1"
   },
   "config": {
     "commitizen": {
