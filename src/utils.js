@@ -14,3 +14,17 @@ export const merge = function (target, resorce) {
     }
     return target;
 }
+
+/**
+ * @param {string | HTMLElement} element The element need to pick
+ * @returns {HTMLElement | null} The official element.
+ */
+export const getElement = function (element) {
+    if (element instanceof HTMLElement) {
+        return document.getElementById(element);
+    } else if (typeof element === 'string') {
+        return element;
+    } else {
+        throw new Error("Element pass in to getElement must be string or HTMLElement");
+    }
+}
