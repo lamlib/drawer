@@ -7,17 +7,20 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "vitest",
     "prepare": "husky install",
-    "release": "standard-version",
-    "commit": "cz"
+    "test": "vitest",
+    "test:browser": "vitest",
+    "commit": "cz",
+    "release": "standard-version"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.0",
     "@commitlint/config-conventional": "^19.8.0",
+    "@vitest/browser": "^3.1.1",
     "commitizen": "^4.3.1",
     "cz-conventional-changelog": "^3.3.0",
     "husky": "^8.0.0",
+    "playwright": "^1.52.0",
     "standard-version": "^9.5.0",
     "vitest": "^3.1.1"
   },

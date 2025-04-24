@@ -1,5 +1,5 @@
 import { expect, test } from "vitest";
-import { merge } from "../src/utils";
+import { getElement, merge } from "../../src/utils";
 
 test('merge flat object', () => {
     const target = {
@@ -54,4 +54,25 @@ test('merge nested object', () => {
         propsD: 'c2',
     }
     expect(merge(target, resource)).toEqual(result)
+})
+
+test('get element by id', () => {
+    const div = document.createElement('div');
+    div.id = 'drawer';
+    div.textContent = 'test get element by id'
+    document.body.appendChild(div);
+
+    const element = getElement('drawer');
+
+    expect(element.id).toBe('drawer');
+})
+
+test('get element by element', () => {
+    const div = document.createElement('div');
+    div.id = 'drawer';
+    document.body.appendChild(div);
+
+    const element = getElement(div);
+
+    expect(element.id).toBe('drawer');
 })

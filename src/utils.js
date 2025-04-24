@@ -20,9 +20,9 @@ export const merge = function (target, resorce) {
  * @returns {HTMLElement | null} The official element.
  */
 export const getElement = function (element) {
-    if (element instanceof HTMLElement) {
+    if (typeof element === 'string' ) {
         return document.getElementById(element);
-    } else if (typeof element === 'string') {
+    } else if (element instanceof HTMLElement) {
         return element;
     } else {
         throw new Error("Element pass in to getElement must be string or HTMLElement");
