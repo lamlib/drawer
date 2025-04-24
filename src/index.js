@@ -75,25 +75,23 @@ Drawer.prototype._drawGrid = function () {
     let numberOfGridInHeight = Math.ceil(this.config.canvasElement.height / this.config.grid.size.height);
     let maxHeight = numberOfGridInHeight * this.config.grid.size.height;
     let maxWidth = numberOfGridInWidth * this.config.grid.size.width;
-    let h = numberOfGridInHeight;
-    while (--h) {
-        let w = numberOfGridInWidth;
-        while (--w) {
-            const x = w * this.config.grid.size.width;
-            const y = h * this.config.grid.size.height;
 
-            const verticalLine = new Line({
-                point1: new Point({ x: x, y: 0 }),
-                point2: new Point({ x: x, y: maxHeight }),
-            });
-            this.addShape(verticalLine);
+    for(let num = 0; num <= numberOfGridInWidth; num++) {
+        const x = num * this.config.grid.size.width;
+        const verticalLine = new Line({
+            point1: new Point({x, y: 0}),
+            point2: new Point({x, y: maxHeight})
+        });
+        this.addShape(verticalLine);
+    }
 
-            const horizontalLine = new Line({
-                point1: new Point({ x: 0, y: y }),
-                point2: new Point({ x: maxWidth, y: y }),
-            });
-            this.addShape(horizontalLine);
-        }
+    for(let num = 0; num <= numberOfGridInHeight; num++) {
+        const y = num * this.config.grid.size.height;
+        const horizontalLine = new Line({
+            point1: new Point({x: 0, y}),
+            point2: new Point({x: maxWidth, y})
+        });
+        this.addShape(horizontalLine);
     }
 }
 
@@ -119,6 +117,41 @@ Drawer.prototype.addShape = function (shape) {
     this.shapes.push(shape);
 }
 
+
+Drawer.prototype._handleScrollWheelClick = function (event) {
+
+}
+
+Drawer.prototype._handleRightMouseClick = function (event) {
+
+}
+
+Drawer.prototype._handleLeftMouseClick = function (event) { 
+
+}
+
+Drawer.prototype._handleLeftMouseDoubleClick = function (event) { 
+
+}
+
+Drawer.prototype._handleTouchStart = function (event) {
+
+}
+
+Drawer.prototype._handleTouchEnd = function (event) {
+
+}
+
+Drawer.prototype._handleTouchMove = function (event) {
+
+}
+
+
+Drawer.prototype.setupEventListeners = function () {
+
+}
+
 export { Drawer };
 export { Point };
 export { Line };
+

@@ -9,6 +9,7 @@
  * @property {RectangleSize} size
  */
 
+
 /**
  * @typedef Config
  * @property {string} VERSION

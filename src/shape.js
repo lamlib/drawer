@@ -1,4 +1,4 @@
-import { Point } from "./point";
+import { Point } from "./point.js";
 
 const Shape = function (option) {
     Point.call(this, option);

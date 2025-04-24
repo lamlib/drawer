@@ -1,5 +1,5 @@
-import { Shape } from "./shape";
-import { Point } from "./point";
+import { Shape } from "./shape.js";
+import { Point } from "./point.js";
 
 
 /**
@@ -23,6 +23,7 @@ const Line = function (opt) {
  * @param {CanvasRenderingContext2D} ctx 
  */
 Line.prototype.draw = function (ctx) {
+    ctx.beginPath();
     ctx.moveTo(this.point1.x, this.point1.y);
     ctx.lineTo(this.point2.x, this.point2.y);
     ctx.stroke();
